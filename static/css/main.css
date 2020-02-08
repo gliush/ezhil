@@ -409,3 +409,17 @@ table th, table td {
         margin-top: 10px;
     }
 }
+
+.description {
+    display: block;
+    margin-left: 10px;
+}
+
+.tags ul {
+    font-size: 80%;
+}
+
+.note-item {
+    display: block;
+}
+}

@@ -16,15 +16,12 @@
 
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
-				{{ if gt .Params.tags 0 }}
-					<nav class="nav tags">
-							<ul class="flat">
-								{{ range .Params.tags }}
-								<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-								{{ end }}
-							</ul>
-					</nav>
-				{{ end }}
+              {{ partial "tags.html" . }}
+			{{ end }}
+		</div>
+		<div class="post-tags">
+			{{ if ne .Type "page" }}
+              {{ partial "categories.html" . }}
 			{{ end }}
 		</div>
 		{{- $.Scratch.Set "isDisqus" true -}}
